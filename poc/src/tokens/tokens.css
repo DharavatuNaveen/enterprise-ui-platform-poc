@@ -1,0 +1,165 @@
+/* ============================================================
+   enterprise-ui-platform — Design Tokens
+   Import once in your app; all org-* components inherit these.
+   Override any token to apply your own brand theme.
+   ============================================================ */
+
+:root {
+  /* --- Color: Brand --- */
+  --org-color-primary:        #1976d2;
+  --org-color-primary-hover:  #1565c0;
+  --org-color-primary-light:  #e3f2fd;
+
+  --org-color-danger:         #d32f2f;
+  --org-color-danger-hover:   #b71c1c;
+  --org-color-danger-light:   #ffebee;
+
+  --org-color-success:        #2e7d32;
+  --org-color-success-light:  #e8f5e9;
+
+  --org-color-warning:        #f57c00;
+  --org-color-warning-light:  #fff3e0;
+
+  --org-color-info:           #0288d1;
+  --org-color-info-light:     #e1f5fe;
+
+  /* --- Color: Neutral --- */
+  --org-color-gray-50:        #fafafa;
+  --org-color-gray-100:       #f5f5f5;
+  --org-color-gray-200:       #eeeeee;
+  --org-color-gray-300:       #e0e0e0;
+  --org-color-gray-400:       #bdbdbd;
+  --org-color-gray-500:       #9e9e9e;
+  --org-color-gray-600:       #757575;
+  --org-color-gray-700:       #616161;
+  --org-color-gray-800:       #424242;
+  --org-color-gray-900:       #212121;
+
+  /* --- Color: Surface --- */
+  --org-color-surface:        #ffffff;
+  --org-color-surface-raised: #ffffff;
+  --org-color-border:         #e0e0e0;
+  --org-color-border-focus:   #1976d2;
+  --org-color-text:           #212121;
+  --org-color-text-secondary: #616161;
+  --org-color-text-disabled:  #9e9e9e;
+  --org-color-text-inverse:   #ffffff;
+
+  /* --- Typography --- */
+  --org-font-family:          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --org-font-size-xs:         11px;
+  --org-font-size-sm:         12px;
+  --org-font-size-md:         14px;
+  --org-font-size-lg:         16px;
+  --org-font-size-xl:         18px;
+  --org-font-weight-regular:  400;
+  --org-font-weight-medium:   500;
+  --org-font-weight-bold:     600;
+  --org-line-height:          1.5;
+
+  /* --- Spacing --- */
+  --org-space-1:   4px;
+  --org-space-2:   8px;
+  --org-space-3:  12px;
+  --org-space-4:  16px;
+  --org-space-5:  20px;
+  --org-space-6:  24px;
+  --org-space-8:  32px;
+  --org-space-10: 40px;
+
+  /* --- Border --- */
+  --org-radius-sm:   4px;
+  --org-radius-md:   6px;
+  --org-radius-lg:   8px;
+  --org-radius-xl:  12px;
+  --org-radius-full: 9999px;
+  --org-border-width: 1px;
+
+  /* --- Shadows --- */
+  --org-shadow-sm:  0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  --org-shadow-md:  0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --org-shadow-lg:  0 10px 15px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.05);
+
+  /* --- Transitions --- */
+  --org-transition-fast:   0.15s ease;
+  --org-transition-normal: 0.2s ease;
+
+  /* --- Z-index --- */
+  --org-z-dropdown: 100;
+  --org-z-modal:    200;
+  --org-z-toast:    300;
+
+  /* --- Component: Button --- */
+  --org-btn-primary-bg:       var(--org-color-primary);
+  --org-btn-primary-bg-hover: var(--org-color-primary-hover);
+  --org-btn-primary-color:    var(--org-color-text-inverse);
+  --org-btn-secondary-bg:     var(--org-color-gray-200);
+  --org-btn-secondary-bg-hover: var(--org-color-gray-300);
+  --org-btn-secondary-color:  var(--org-color-text);
+  --org-btn-danger-bg:        var(--org-color-danger);
+  --org-btn-danger-bg-hover:  var(--org-color-danger-hover);
+  --org-btn-danger-color:     var(--org-color-text-inverse);
+  --org-btn-ghost-bg:         transparent;
+  --org-btn-ghost-bg-hover:   var(--org-color-gray-100);
+  --org-btn-ghost-color:      var(--org-color-primary);
+  --org-btn-focus-ring:       var(--org-color-primary);
+  --org-btn-radius:           var(--org-radius-md);
+
+  /* --- Component: Input --- */
+  --org-input-bg:             var(--org-color-surface);
+  --org-input-border:         var(--org-color-border);
+  --org-input-border-focus:   var(--org-color-primary);
+  --org-input-border-error:   var(--org-color-danger);
+  --org-input-border-success: var(--org-color-success);
+  --org-input-radius:         var(--org-radius-md);
+  --org-input-color:          var(--org-color-text);
+  --org-input-placeholder:    var(--org-color-gray-500);
+  --org-input-label-color:    var(--org-color-gray-700);
+  --org-input-helper-color:   var(--org-color-text-secondary);
+  --org-input-error-color:    var(--org-color-danger);
+  --org-input-success-color:  var(--org-color-success);
+
+  /* --- Component: Select --- */
+  --org-select-bg:            var(--org-color-surface);
+  --org-select-border:        var(--org-color-border);
+  --org-select-border-focus:  var(--org-color-primary);
+  --org-select-radius:        var(--org-radius-md);
+  --org-select-option-hover:  var(--org-color-primary-light);
+  --org-select-option-selected: var(--org-color-primary-light);
+
+  /* --- Component: Search --- */
+  --org-search-bg:            var(--org-color-surface);
+  --org-search-border:        var(--org-color-border);
+  --org-search-border-focus:  var(--org-color-primary);
+  --org-search-radius:        var(--org-radius-full);
+  --org-search-icon-color:    var(--org-color-gray-500);
+
+  /* --- Component: Spinner --- */
+  --org-spinner-color:        var(--org-color-primary);
+  --org-spinner-track:        var(--org-color-gray-200);
+
+  /* --- Component: Skeleton --- */
+  --org-skeleton-base:        var(--org-color-gray-200);
+  --org-skeleton-shine:       var(--org-color-gray-100);
+}
+
+/* Dark mode token overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --org-color-surface:        #1e1e1e;
+    --org-color-surface-raised: #2a2a2a;
+    --org-color-border:         #424242;
+    --org-color-text:           #f5f5f5;
+    --org-color-text-secondary: #bdbdbd;
+    --org-color-text-disabled:  #757575;
+    --org-color-gray-100:       #2a2a2a;
+    --org-color-gray-200:       #333333;
+    --org-color-gray-300:       #424242;
+    --org-skeleton-base:        #333333;
+    --org-skeleton-shine:       #424242;
+    --org-btn-secondary-bg:     #333333;
+    --org-btn-secondary-bg-hover: #424242;
+    --org-btn-secondary-color:  #f5f5f5;
+    --org-btn-ghost-bg-hover:   #2a2a2a;
+  }
+}
