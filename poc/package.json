@@ -1,6 +1,6 @@
 {
-  "name": "@praval/ui-components",
-  "version": "1.0.0",
+  "name": "ui-components-framework",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "types": "dist/index.d.ts",
