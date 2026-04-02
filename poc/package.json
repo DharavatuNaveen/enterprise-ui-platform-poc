@@ -1,6 +1,7 @@
 {
   "name": "ui-components-framework",
   "version": "1.0.5",
+  "homepage": " https://dharavatunaveen.github.io/enterprise-ui-platform-poc",
   "description": "",
   "main": "index.js",
   "types": "dist/index.d.ts",
