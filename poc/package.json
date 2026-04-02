@@ -3,9 +3,9 @@
   "version": "1.0.5",
   "description": "",
   "main": "index.js",
-  "types": "dist/index.d.ts",
+  "types": "docs/index.d.ts",
   "files": [
-    "dist"
+    "docs"
   ],
   "private": false,
   "scripts": {
