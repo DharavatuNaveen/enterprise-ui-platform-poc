@@ -4,7 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": ["ES2019", "DOM", "DOM.Iterable"],
-    "outDir": "docs",
+    "outDir": "dist",
     "rootDir": "src",
     "declaration": true,
     "declarationMap": true,
@@ -19,5 +19,5 @@
     "skipLibCheck": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "docs", "src/stories"]
+  "exclude": ["node_modules", "dist", "src/stories"]
 }
