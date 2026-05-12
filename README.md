@@ -1,4 +1,4 @@
-# enterprise-ui-platform
+# ui-components-framework
 
 A framework-agnostic Web Component library for enterprise apps. Built with [Lit](https://lit.dev/), works in React, Vue, Angular, and plain HTML with zero framework lock-in.
 
@@ -7,7 +7,7 @@ A framework-agnostic Web Component library for enterprise apps. Built with [Lit]
 ## Installation
 
 ```bash
-npm install enterprise-ui-platform
+npm install ui-components-framework
 ```
 
 ---
@@ -17,69 +17,59 @@ npm install enterprise-ui-platform
 ### Plain HTML
 ```html
 <!-- 1. Import tokens (once, globally) -->
-<link rel="stylesheet" href="node_modules/enterprise-ui-platform/dist/tokens/tokens.css" />
+<link rel="stylesheet" href="node_modules/ui-components-framework/dist/tokens/tokens.css" />
 
 <!-- 2. Import components -->
 <script type="module">
-  import 'enterprise-ui-platform';
+  import 'ui-components-framework/dist/index.js';
 </script>
 
 <!-- 3. Use -->
 <org-button variant="primary">Save</org-button>
 <org-input label="Email" type="email" placeholder="you@company.com"></org-input>
+<org-card shadow="md"><div slot="header">Title</div><p>Content</p></org-card>
 ```
 
 ### React
 ```tsx
-import 'enterprise-ui-platform';
-import 'enterprise-ui-platform/dist/tokens/tokens.css';
+import { useRef, useCallback } from 'react';
+import 'ui-components-framework/dist/index.js';
 
-// Components are standard HTML elements — use them like divs
-export function SaveForm() {
-//example to handle events
-
- const btnRef = useRef<HTMLElement>(null);
-
-  // Safely attach the custom Web Component event to standard React onClick
-  useEffect(() => {
-    //as these are native web components must use ref for components to handle events 
-    const el = btnRef.current;
+export function MyPage() {
+  // Use a callback ref to listen to custom Web Component events
+  const searchRef = useCallback((el: HTMLElement | null) => {
     if (!el) return;
-
-    const handleClick = (e: Event) => {
-      if (onClick) onClick(e);
-    };
-
-    el.addEventListener('org-button:click', handleClick);
-
-    // Cleanup listener on unmount
-    return () => {
-      el.removeEventListener('org-button:click', handleClick);
-    };
-  }, [onClick]);
+    el.addEventListener('org-search:search', (e: Event) => {
+      const value = (e as CustomEvent<{ value: string }>).detail.value;
+      console.log('Search value:', value);
+    });
+  }, []);
 
   return (
-    <org-button
-    ref={btnRef}
-      variant="primary"
-    >
-      Save
-    </org-button>
+    <>
+      <org-button variant="primary">Save</org-button>
+      <org-search ref={searchRef} placeholder="Search..." debounce="300" />
+      <org-card shadow="md">
+        <div slot="header">Card Title</div>
+        <p>Card body content.</p>
+      </org-card>
+    </>
   );
 }
 ```
 
 > **Tip:** For full TypeScript support in React/JSX, add this to a `.d.ts` file in your project:
 > ```ts
-> import type {} from 'enterprise-ui-platform';
+> import 'react';
 > declare global {
 >   namespace JSX {
 >     interface IntrinsicElements {
->       'org-button': any;
->       'org-input': any;
->       'org-select': any;
->       'org-spinner': any;
->       'org-skeleton': any;
+>       'org-button': React.HTMLAttributes<HTMLElement> & { variant?: string; size?: string; loading?: ''; disabled?: '' };
+>       'org-input': React.HTMLAttributes<HTMLElement> & { label?: string; type?: string; placeholder?: string; error?: string; size?: string };
+>       'org-select': React.HTMLAttributes<HTMLElement> & { label?: string; placeholder?: string; error?: string; size?: string };
+>       'org-search': React.HTMLAttributes<HTMLElement> & { placeholder?: string; debounce?: string; size?: string; loading?: '' };
+>       'org-spinner': React.HTMLAttributes<HTMLElement> & { size?: string; color?: string; label?: string };
+>       'org-card': React.HTMLAttributes<HTMLElement> & { shadow?: 'none'|'sm'|'md'|'lg'; variant?: string; size?: string; clickable?: ''; disabled?: '' };
 >     }
 >   }
 > }
@@ -304,6 +294,79 @@ interface SelectOption {
 | `size`   | `small \| medium \| large \| xlarge` | `medium`  |
 | `color`  | `string`                          | (token)      |
 | `label`  | `string`                          | `Loading...` |
+
+---
+
+### `<org-search>`
+
+```html
+<!-- Basic -->
+<org-search placeholder="Search by name..."></org-search>
+
+<!-- With debounce and size -->
+<org-search placeholder="Search vendors..." size="large" debounce="300"></org-search>
+
+<!-- Loading state -->
+<org-search placeholder="Searching..." loading></org-search>
+```
+
+| Property      | Type                       | Default    |
+|---------------|----------------------------|------------|
+| `placeholder` | `string`                   | `Search...`|
+| `size`        | `small \| medium \| large` | `medium`   |
+| `debounce`    | `number`                   | `300`      |
+| `disabled`    | `boolean`                  | `false`    |
+| `loading`     | `boolean`                  | `false`    |
+| `value`       | `string`                   | `''`       |
+
+**Events:** `org-search:search` → `{ value: string }` · `org-search:submit` → `{ value: string }` · `org-search:clear`
+
+> In React, use a `ref` to attach listeners (React's `onChange` does not fire for custom events):
+> ```tsx
+> const ref = useCallback((el) => {
+>   el?.addEventListener('org-search:search', (e) => console.log(e.detail.value));
+> }, []);
+> <org-search ref={ref} />
+> ```
+
+---
+
+### `<org-card>`
+
+```html
+<!-- Basic -->
+<org-card shadow="md">
+  <div slot="header">Card Title</div>
+  <p>Body content goes here.</p>
+  <div slot="footer"><org-button variant="primary" size="small">Action</org-button></div>
+</org-card>
+
+<!-- With cover image -->
+<org-card shadow="lg" style="max-width:320px">
+  <img slot="media" src="cover.jpg" alt="Cover" style="width:100%;height:160px;object-fit:cover" />
+  <div slot="header">Image Card</div>
+  <p>Content below the image.</p>
+</org-card>
+
+<!-- Clickable card -->
+<org-card clickable shadow="sm" variant="outlined"></org-card>
+```
+
+| Property    | Type                                | Default    |
+|-------------|-------------------------------------|------------|
+| `shadow`    | `none \| sm \| md \| lg`            | `md`       |
+| `variant`   | `default \| outlined \| elevated`   | `default`  |
+| `size`      | `small \| medium \| large`          | `medium`   |
+| `clickable` | `boolean`                           | `false`    |
+| `disabled`  | `boolean`                           | `false`    |
+
+**Slots:** default (body) · `header` · `media` (cover image) · `footer`
+
+**Events:** `org-card:click` → `{ originalEvent: MouseEvent }` _(only when `clickable`)_
+
+**CSS Parts:** `::part(card)` · `::part(header)` · `::part(media)` · `::part(body)` · `::part(footer)`
+
+**CSS Tokens:** `--org-card-bg`, `--org-card-border`, `--org-card-radius`, `--org-card-shadow-sm/md/lg`
 
 ---
 
