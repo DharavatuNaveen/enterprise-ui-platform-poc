@@ -1,5 +1,6 @@
-node_modules
-dist
-dist-ssr
-*.local
-.cache
+dist/
+docs/
+storybook-static/
+node_modules/
+*.tgz
+{src/

@@ -54,6 +54,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
     required: { control: 'boolean', description: 'Whether the input is required' },
     readonly: { control: 'boolean', description: 'Whether the input is read-only' },
     maxlength: { control: 'number', description: 'Maximum character length (shows counter when set)' },
+    onInput: { action: 'input' },
   },
 };
 
@@ -83,6 +84,7 @@ export const Playground: Story = {
         .value="${args.value}"
         placeholder="${args.placeholder || nothing}"
         type="${args.type}"
+        @input="${args.onInput}"
         helper="${args.helper || nothing}"
         error="${args.error || nothing}"
         success="${args.success || nothing}"

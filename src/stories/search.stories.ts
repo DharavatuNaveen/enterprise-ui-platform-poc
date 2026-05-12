@@ -54,6 +54,9 @@ The **\`<org-search>\`** component is a specialized search input with built-in i
       description: 'Debounce delay in milliseconds',
       table: { defaultValue: { summary: '300' } },
     },
+    onSearch: { action: 'search' },
+    onSubmit: { action: 'submit' },
+    onClear: { action: 'clear' },
   },
 };
 
@@ -80,9 +83,9 @@ export const Playground: Story = {
         ?disabled="${args.disabled}"
         ?loading="${args.loading}"
         debounce="${args.debounce}"
-        @org-search:search="${(e: CustomEvent) => console.log('search:', e.detail)}"
-        @org-search:submit="${(e: CustomEvent) => console.log('submit:', e.detail)}"
-        @org-search:clear="${() => console.log('cleared')}"
+        @org-search:search="${args.onSearch}"
+        @org-search:submit="${args.onSubmit}"
+        @org-search:clear="${args.onClear}"
       ></org-search>
     </div>
   `,

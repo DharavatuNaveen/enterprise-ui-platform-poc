@@ -13,6 +13,7 @@ type Story = StoryObj;
 const meta: Meta = {
   title: 'Components/OrgSpinner',
   component: 'org-spinner',
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
@@ -24,14 +25,14 @@ const meta: Meta = {
   argTypes: {
     size: {
       control: 'select',
-      options: ["small","medium","large","xlarge"],
+      options: ["small", "medium", "large", "xlarge"],
       description: 'Variant options',
     },
     color: { control: 'text' },
     label: { control: 'text' },
     variant: {
       control: 'select',
-      options: ["text","circle","rect","card"],
+      options: ["text", "circle", "rect", "card"],
       description: 'Variant options',
     },
     width: { control: 'text' },
@@ -41,14 +42,14 @@ const meta: Meta = {
   },
   render: (args) => {
     const el = document.createElement('org-spinner') as any;
-  if (args.size !== undefined) el.size = args.size;
-  if (args.color !== undefined) el.color = args.color;
-  if (args.label !== undefined) el.label = args.label;
-  if (args.variant !== undefined) el.variant = args.variant;
-  if (args.width !== undefined) el.width = args.width;
-  if (args.height !== undefined) el.height = args.height;
-  if (args.lines !== undefined) el.lines = args.lines;
-  if (args.animated !== undefined) el.animated = args.animated;
+    if (args.size !== undefined) el.size = args.size;
+    if (args.color !== undefined) el.color = args.color;
+    if (args.label !== undefined) el.label = args.label;
+    if (args.variant !== undefined) el.variant = args.variant;
+    if (args.width !== undefined) el.width = args.width;
+    if (args.height !== undefined) el.height = args.height;
+    if (args.lines !== undefined) el.lines = args.lines;
+    if (args.animated !== undefined) el.animated = args.animated;
 
     el.textContent = el.textContent || 'OrgSpinner';
     return el;

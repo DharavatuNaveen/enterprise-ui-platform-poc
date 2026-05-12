@@ -36,10 +36,32 @@ import 'enterprise-ui-platform/dist/tokens/tokens.css';
 
 // Components are standard HTML elements — use them like divs
 export function SaveForm() {
+//example to handle events
+
+ const btnRef = useRef<HTMLElement>(null);
+
+  // Safely attach the custom Web Component event to standard React onClick
+  useEffect(() => {
+    //as these are native web components must use ref for components to handle events 
+    const el = btnRef.current;
+    if (!el) return;
+
+    const handleClick = (e: Event) => {
+      if (onClick) onClick(e);
+    };
+
+    el.addEventListener('org-button:click', handleClick);
+
+    // Cleanup listener on unmount
+    return () => {
+      el.removeEventListener('org-button:click', handleClick);
+    };
+  }, [onClick]);
+
   return (
     <org-button
+    ref={btnRef}
       variant="primary"
-      onOrg-button:click={(e) => console.log(e.detail)}
     >
       Save
     </org-button>
@@ -282,35 +304,6 @@ interface SelectOption {
 | `size`   | `small \| medium \| large \| xlarge` | `medium`  |
 | `color`  | `string`                          | (token)      |
 | `label`  | `string`                          | `Loading...` |
-
----
-
-### `<org-skeleton>`
-
-```html
-<!-- Text lines -->
-<org-skeleton variant="text" lines="3"></org-skeleton>
-
-<!-- Circle (avatar) -->
-<org-skeleton variant="circle" width="40px"></org-skeleton>
-
-<!-- Rectangle (image placeholder) -->
-<org-skeleton variant="rect" width="100%" height="200px"></org-skeleton>
-
-<!-- Card -->
-<org-skeleton variant="card"></org-skeleton>
-
-<!-- No animation -->
-<org-skeleton variant="text" animated="false"></org-skeleton>
-```
-
-| Property   | Type                             | Default |
-|------------|----------------------------------|---------|
-| `variant`  | `text \| circle \| rect \| card` | `text`  |
-| `width`    | `string`                         | `''`    |
-| `height`   | `string`                         | `''`    |
-| `lines`    | `number`                         | `3`     |
-| `animated` | `boolean`                        | `true`  |
 
 ---
 

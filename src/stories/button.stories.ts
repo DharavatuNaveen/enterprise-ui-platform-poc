@@ -25,11 +25,10 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
 
 ### Installation
 \`\`\`html
-<script type="module">
-  import 'enterprise-ui-platform';
-</script>
+npm i ui-components-framework
 
 <org-button variant="primary">Submit</org-button>
+
 \`\`\`
 `,
       },
@@ -42,6 +41,7 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
       description: 'Visual variant of the button',
       table: { defaultValue: { summary: 'primary' } },
     },
+    onClick: { action: 'clicked' },
     size: {
       control: 'select',
       options: ['small', 'medium', 'large'],
@@ -92,6 +92,7 @@ export const Playground: Story = {
       ?disabled="${args.disabled}"
       ?loading="${args.loading}"
       type="${args.type}"
+      @click="${args.onClick}"
     >${args.label}</org-button>
   `,
 };

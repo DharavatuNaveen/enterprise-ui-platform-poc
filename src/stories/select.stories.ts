@@ -94,6 +94,7 @@ The **\`<org-select>\`** component is a feature-rich dropdown for single and mul
     },
     error: { control: 'text', description: 'Error message' },
     helper: { control: 'text', description: 'Helper text' },
+    onChange: { action: 'change' },
   },
 };
 
