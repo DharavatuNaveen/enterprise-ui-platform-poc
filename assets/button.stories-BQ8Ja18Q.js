@@ -1,4 +1,4 @@
-import{i as z,a as D,A as S,b as r}from"./iframe-D5HhjVZl.js";import{n as a,t as $}from"./property-Bv4SVM5X.js";import"./preload-helper-PPVm8Dsz.js";var P=Object.defineProperty,w=Object.getOwnPropertyDescriptor,n=(t,i,h,s)=>{for(var e=s>1?void 0:s?w(i,h):i,f=t.length-1,x;f>=0;f--)(x=t[f])&&(e=(s?x(i,h,e):x(e))||e);return s&&e&&P(i,h,e),e};let o=class extends D{constructor(){super(...arguments),this.variant="primary",this.size="medium",this.disabled=!1,this.loading=!1,this.ariaLabel="",this.type="button"}handleClick(t){if(this.disabled||this.loading){t.preventDefault(),t.stopPropagation();return}this.dispatchEvent(new CustomEvent("org-button:click",{bubbles:!0,composed:!0,detail:{originalEvent:t}}))}render(){return r`
+import{i as z,a as $,A as S,b as r}from"./iframe-8TPnJ_Fq.js";import{n as a,t as k}from"./property-D7Ek9MnM.js";import"./preload-helper-PPVm8Dsz.js";var D=Object.defineProperty,P=Object.getOwnPropertyDescriptor,e=(t,i,h,s)=>{for(var n=s>1?void 0:s?P(i,h):i,f=t.length-1,x;f>=0;f--)(x=t[f])&&(n=(s?x(i,h,n):x(n))||n);return s&&n&&D(i,h,n),n};let o=class extends ${constructor(){super(...arguments),this.variant="primary",this.size="medium",this.disabled=!1,this.loading=!1,this.ariaLabel="",this.type="button"}handleClick(t){if(this.disabled||this.loading){t.preventDefault(),t.stopPropagation();return}this.dispatchEvent(new CustomEvent("org-button:click",{bubbles:!0,composed:!0,detail:{originalEvent:t}}))}render(){return r`
       <button
         part="button"
         class="${this.variant} ${this.size}"
@@ -108,7 +108,7 @@ import{i as z,a as D,A as S,b as r}from"./iframe-D5HhjVZl.js";import{n as a,t as
       display: flex;
       align-items: center;
     }
-  `;n([a({type:String})],o.prototype,"variant",2);n([a({type:String})],o.prototype,"size",2);n([a({type:Boolean,reflect:!0})],o.prototype,"disabled",2);n([a({type:Boolean,reflect:!0})],o.prototype,"loading",2);n([a({type:String,attribute:"aria-label"})],o.prototype,"ariaLabel",2);n([a({type:String})],o.prototype,"type",2);o=n([$("org-button")],o);const V={title:"Components/Button",component:"org-button",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
+  `;e([a({type:String})],o.prototype,"variant",2);e([a({type:String})],o.prototype,"size",2);e([a({type:Boolean,reflect:!0})],o.prototype,"disabled",2);e([a({type:Boolean,reflect:!0})],o.prototype,"loading",2);e([a({type:String,attribute:"aria-label"})],o.prototype,"ariaLabel",2);e([a({type:String})],o.prototype,"type",2);o=e([k("org-button")],o);const L={title:"Components/Button",component:"org-button",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
 The **\`<org-button>\`** component triggers an action or event when clicked.
 
 ### Features
@@ -121,28 +121,28 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
 
 ### Installation
 \`\`\`html
-<script type="module">
-  import 'enterprise-ui-platform';
-<\/script>
+npm i ui-components-framework
 
 <org-button variant="primary">Submit</org-button>
+
 \`\`\`
-`}}},argTypes:{variant:{control:"select",options:["primary","secondary","danger","ghost"],description:"Visual variant of the button",table:{defaultValue:{summary:"primary"}}},size:{control:"select",options:["small","medium","large"],description:"Size of the button",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the button is disabled",table:{defaultValue:{summary:"false"}}},loading:{control:"boolean",description:"Whether the button shows a loading spinner",table:{defaultValue:{summary:"false"}}},type:{control:"select",options:["button","submit","reset"],description:"The HTML button type attribute",table:{defaultValue:{summary:"button"}}},label:{control:"text",description:"Button text content"}}},d={name:"Playground",args:{variant:"primary",size:"medium",disabled:!1,loading:!1,type:"button",label:"Click me"},render:t=>r`
+`}}},argTypes:{variant:{control:"select",options:["primary","secondary","danger","ghost"],description:"Visual variant of the button",table:{defaultValue:{summary:"primary"}}},onClick:{action:"clicked"},size:{control:"select",options:["small","medium","large"],description:"Size of the button",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the button is disabled",table:{defaultValue:{summary:"false"}}},loading:{control:"boolean",description:"Whether the button shows a loading spinner",table:{defaultValue:{summary:"false"}}},type:{control:"select",options:["button","submit","reset"],description:"The HTML button type attribute",table:{defaultValue:{summary:"button"}}},label:{control:"text",description:"Button text content"}}},d={name:"Playground",args:{variant:"primary",size:"medium",disabled:!1,loading:!1,type:"button",label:"Click me"},render:t=>r`
     <org-button
       variant="${t.variant}"
       size="${t.size}"
       ?disabled="${t.disabled}"
       ?loading="${t.loading}"
       type="${t.type}"
+      @click="${t.onClick}"
     >${t.label}</org-button>
-  `},l={name:"Primary",render:()=>r`<org-button variant="primary">Primary Button</org-button>`},g={name:"Secondary",render:()=>r`<org-button variant="secondary">Secondary Button</org-button>`},u={name:"Danger",render:()=>r`<org-button variant="danger">Danger Button</org-button>`},p={name:"Ghost",render:()=>r`<org-button variant="ghost">Ghost Button</org-button>`},b={name:"All Variants",render:()=>r`
+  `},l={name:"Primary",render:()=>r`<org-button variant="primary">Primary Button</org-button>`},g={name:"Secondary",render:()=>r`<org-button variant="secondary">Secondary Button</org-button>`},u={name:"Danger",render:()=>r`<org-button variant="danger">Danger Button</org-button>`},c={name:"Ghost",render:()=>r`<org-button variant="ghost">Ghost Button</org-button>`},p={name:"All Variants",render:()=>r`
     <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
       <org-button variant="primary">Primary</org-button>
       <org-button variant="secondary">Secondary</org-button>
       <org-button variant="danger">Danger</org-button>
       <org-button variant="ghost">Ghost</org-button>
     </div>
-  `},c={name:"Sizes",render:()=>r`
+  `},b={name:"Sizes",render:()=>r`
     <div style="display: flex; gap: 12px; align-items: center;">
       <org-button size="small">Small</org-button>
       <org-button size="medium">Medium</org-button>
@@ -193,6 +193,7 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
       ?disabled="\${args.disabled}"
       ?loading="\${args.loading}"
       type="\${args.type}"
+      @click="\${args.onClick}"
     >\${args.label}</org-button>
   \`
 }`,...d.parameters?.docs?.source}}};l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{
@@ -204,10 +205,10 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
 }`,...g.parameters?.docs?.source}}};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
   name: 'Danger',
   render: () => html\`<org-button variant="danger">Danger Button</org-button>\`
-}`,...u.parameters?.docs?.source}}};p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{
+}`,...u.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
   name: 'Ghost',
   render: () => html\`<org-button variant="ghost">Ghost Button</org-button>\`
-}`,...p.parameters?.docs?.source}}};b.parameters={...b.parameters,docs:{...b.parameters?.docs,source:{originalSource:`{
+}`,...c.parameters?.docs?.source}}};p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{
   name: 'All Variants',
   render: () => html\`
     <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
@@ -217,7 +218,7 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
       <org-button variant="ghost">Ghost</org-button>
     </div>
   \`
-}`,...b.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+}`,...p.parameters?.docs?.source}}};b.parameters={...b.parameters,docs:{...b.parameters?.docs,source:{originalSource:`{
   name: 'Sizes',
   render: () => html\`
     <div style="display: flex; gap: 12px; align-items: center;">
@@ -226,7 +227,7 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
       <org-button size="large">Large</org-button>
     </div>
   \`
-}`,...c.parameters?.docs?.source}}};m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
+}`,...b.parameters?.docs?.source}}};m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
   name: 'Loading',
   render: () => html\`
     <div style="display: flex; gap: 12px; align-items: center;">
@@ -263,4 +264,4 @@ The **\`<org-button>\`** component triggers an action or event when clicked.
       </org-button>
     </div>
   \`
-}`,...v.parameters?.docs?.source}}};const C=["Playground","Primary","Secondary","Danger","Ghost","AllVariants","Sizes","Loading","Disabled","WithIcon"];export{b as AllVariants,u as Danger,y as Disabled,p as Ghost,m as Loading,d as Playground,l as Primary,g as Secondary,c as Sizes,v as WithIcon,C as __namedExportsOrder,V as default};
+}`,...v.parameters?.docs?.source}}};const V=["Playground","Primary","Secondary","Danger","Ghost","AllVariants","Sizes","Loading","Disabled","WithIcon"];export{p as AllVariants,u as Danger,y as Disabled,c as Ghost,m as Loading,d as Playground,l as Primary,g as Secondary,b as Sizes,v as WithIcon,V as __namedExportsOrder,L as default};

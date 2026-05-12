@@ -1,12 +1,12 @@
-import{i as z,a as P,A as a,b as o}from"./iframe-D5HhjVZl.js";import{n as s,t as C}from"./property-Bv4SVM5X.js";import{r as _}from"./state-lOhfy5K9.js";import{e as E}from"./query-BYlH-2gt.js";import"./preload-helper-PPVm8Dsz.js";var q=Object.defineProperty,W=Object.getOwnPropertyDescriptor,t=(e,i,n,p)=>{for(var l=p>1?void 0:p?W(i,n):i,S=e.length-1,$;S>=0;S--)($=e[S])&&(l=(p?$(i,n,l):$(l))||l);return p&&l&&q(i,n,l),l};let r=class extends P{constructor(){super(),this.label="",this.value="",this.placeholder="",this.type="text",this.name="",this.helper="",this.error="",this.success="",this.size="medium",this.disabled=!1,this.required=!1,this.readonly=!1,this.pattern="",this.autocomplete="",this._hasPrefix=!1,this._hasSuffix=!1,this._internals=this.attachInternals()}get validity(){return this._internals.validity}get validationMessage(){return this._internals.validationMessage}focus(){this._input?.focus()}blur(){this._input?.blur()}_onInput(e){const i=e.target;this.value=i.value,this._internals.setFormValue(this.value),this.dispatchEvent(new CustomEvent("org-input:input",{bubbles:!0,composed:!0,detail:{value:this.value}}))}_onChange(e){const i=e.target;this.value=i.value,this.dispatchEvent(new CustomEvent("org-input:change",{bubbles:!0,composed:!0,detail:{value:this.value}}))}_onFocus(){this.dispatchEvent(new CustomEvent("org-input:focus",{bubbles:!0,composed:!0}))}_onBlur(){this.dispatchEvent(new CustomEvent("org-input:blur",{bubbles:!0,composed:!0}))}get _wrapperClass(){const e=["input-wrapper"];return this.error&&e.push("error"),this.success&&!this.error&&e.push("success"),this.disabled&&e.push("disabled"),this._hasPrefix&&e.push("has-prefix"),this._hasSuffix&&e.push("has-suffix"),e.join(" ")}get _containerClass(){return this.size}_onPrefixSlotChange(e){const i=e.target;this._hasPrefix=i.assignedNodes({flatten:!0}).length>0}_onSuffixSlotChange(e){const i=e.target;this._hasSuffix=i.assignedNodes({flatten:!0}).length>0}render(){const e=this.value.length,i=this.maxlength!==void 0&&e>this.maxlength,n=this.error||this.success||this.helper,p=this.error?"error":this.success?"success":"";return o`
+import{i as z,a as P,A as o,b as a}from"./iframe-8TPnJ_Fq.js";import{n as i,t as C}from"./property-D7Ek9MnM.js";import{r as _}from"./state-BNB_GTPE.js";import{e as E}from"./query-BYlH-2gt.js";import"./preload-helper-PPVm8Dsz.js";var q=Object.defineProperty,I=Object.getOwnPropertyDescriptor,t=(e,n,s,p)=>{for(var l=p>1?void 0:p?I(n,s):n,S=e.length-1,$;S>=0;S--)($=e[S])&&(l=(p?$(n,s,l):$(l))||l);return p&&l&&q(n,s,l),l};let r=class extends P{constructor(){super(),this.label="",this.value="",this.placeholder="",this.type="text",this.name="",this.helper="",this.error="",this.success="",this.size="medium",this.disabled=!1,this.required=!1,this.readonly=!1,this.pattern="",this.autocomplete="",this._hasPrefix=!1,this._hasSuffix=!1,this._internals=this.attachInternals()}get validity(){return this._internals.validity}get validationMessage(){return this._internals.validationMessage}focus(){this._input?.focus()}blur(){this._input?.blur()}_onInput(e){const n=e.target;this.value=n.value,this._internals.setFormValue(this.value),this.dispatchEvent(new CustomEvent("org-input:input",{bubbles:!0,composed:!0,detail:{value:this.value}}))}_onChange(e){const n=e.target;this.value=n.value,this.dispatchEvent(new CustomEvent("org-input:change",{bubbles:!0,composed:!0,detail:{value:this.value}}))}_onFocus(){this.dispatchEvent(new CustomEvent("org-input:focus",{bubbles:!0,composed:!0}))}_onBlur(){this.dispatchEvent(new CustomEvent("org-input:blur",{bubbles:!0,composed:!0}))}get _wrapperClass(){const e=["input-wrapper"];return this.error&&e.push("error"),this.success&&!this.error&&e.push("success"),this.disabled&&e.push("disabled"),this._hasPrefix&&e.push("has-prefix"),this._hasSuffix&&e.push("has-suffix"),e.join(" ")}get _containerClass(){return this.size}_onPrefixSlotChange(e){const n=e.target;this._hasPrefix=n.assignedNodes({flatten:!0}).length>0}_onSuffixSlotChange(e){const n=e.target;this._hasSuffix=n.assignedNodes({flatten:!0}).length>0}render(){const e=this.value.length,n=this.maxlength!==void 0&&e>this.maxlength,s=this.error||this.success||this.helper,p=this.error?"error":this.success?"success":"";return a`
       <div class="container ${this._containerClass}" part="container">
 
-        ${this.label?o`
+        ${this.label?a`
           <label part="label">
             ${this.label}
-            ${this.required?o`<span class="required-star" aria-hidden="true">*</span>`:a}
+            ${this.required?a`<span class="required-star" aria-hidden="true">*</span>`:o}
           </label>
-        `:a}
+        `:o}
 
         <div class="${this._wrapperClass}">
           <span class="slot-prefix">
@@ -16,18 +16,18 @@ import{i as z,a as P,A as a,b as o}from"./iframe-D5HhjVZl.js";import{n as s,t as
           <input
             part="input"
             type="${this.type}"
-            name="${this.name||a}"
+            name="${this.name||o}"
             .value="${this.value}"
-            placeholder="${this.placeholder||a}"
+            placeholder="${this.placeholder||o}"
             ?disabled="${this.disabled}"
             ?required="${this.required}"
             ?readonly="${this.readonly}"
-            maxlength="${this.maxlength??a}"
-            minlength="${this.minlength??a}"
-            pattern="${this.pattern||a}"
-            autocomplete="${this.autocomplete||a}"
-            aria-invalid="${this.error?"true":a}"
-            aria-describedby="${n?"helper":a}"
+            maxlength="${this.maxlength??o}"
+            minlength="${this.minlength??o}"
+            pattern="${this.pattern||o}"
+            autocomplete="${this.autocomplete||o}"
+            aria-invalid="${this.error?"true":o}"
+            aria-describedby="${s?"helper":o}"
             @input="${this._onInput}"
             @change="${this._onChange}"
             @focus="${this._onFocus}"
@@ -40,17 +40,17 @@ import{i as z,a as P,A as a,b as o}from"./iframe-D5HhjVZl.js";import{n as s,t as
         </div>
 
         <div style="display:flex; align-items:center;">
-          ${n?o`
+          ${s?a`
             <span id="helper" class="helper-text ${p}" part="helper">
-              ${n}
+              ${s}
             </span>
-          `:a}
+          `:o}
 
-          ${this.maxlength!==void 0?o`
-            <span class="char-count ${i?"over":""}">
+          ${this.maxlength!==void 0?a`
+            <span class="char-count ${n?"over":""}">
               ${e}/${this.maxlength}
             </span>
-          `:a}
+          `:o}
         </div>
 
       </div>
@@ -179,7 +179,7 @@ import{i as z,a as P,A as a,b as o}from"./iframe-D5HhjVZl.js";import{n as s,t as
     }
 
     .char-count.over { color: var(--org-input-error-color, #d32f2f); }
-  `;t([s({type:String})],r.prototype,"label",2);t([s({type:String})],r.prototype,"value",2);t([s({type:String})],r.prototype,"placeholder",2);t([s({type:String})],r.prototype,"type",2);t([s({type:String})],r.prototype,"name",2);t([s({type:String})],r.prototype,"helper",2);t([s({type:String})],r.prototype,"error",2);t([s({type:String})],r.prototype,"success",2);t([s({type:String})],r.prototype,"size",2);t([s({type:Boolean,reflect:!0})],r.prototype,"disabled",2);t([s({type:Boolean,reflect:!0})],r.prototype,"required",2);t([s({type:Boolean})],r.prototype,"readonly",2);t([s({type:Number})],r.prototype,"maxlength",2);t([s({type:Number})],r.prototype,"minlength",2);t([s({type:String})],r.prototype,"pattern",2);t([s({type:String})],r.prototype,"autocomplete",2);t([_()],r.prototype,"_hasPrefix",2);t([_()],r.prototype,"_hasSuffix",2);t([E("input")],r.prototype,"_input",2);r=t([C("org-input")],r);const F={title:"Components/Input",component:"org-input",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
+  `;t([i({type:String})],r.prototype,"label",2);t([i({type:String})],r.prototype,"value",2);t([i({type:String})],r.prototype,"placeholder",2);t([i({type:String})],r.prototype,"type",2);t([i({type:String})],r.prototype,"name",2);t([i({type:String})],r.prototype,"helper",2);t([i({type:String})],r.prototype,"error",2);t([i({type:String})],r.prototype,"success",2);t([i({type:String})],r.prototype,"size",2);t([i({type:Boolean,reflect:!0})],r.prototype,"disabled",2);t([i({type:Boolean,reflect:!0})],r.prototype,"required",2);t([i({type:Boolean})],r.prototype,"readonly",2);t([i({type:Number})],r.prototype,"maxlength",2);t([i({type:Number})],r.prototype,"minlength",2);t([i({type:String})],r.prototype,"pattern",2);t([i({type:String})],r.prototype,"autocomplete",2);t([_()],r.prototype,"_hasPrefix",2);t([_()],r.prototype,"_hasSuffix",2);t([E("input")],r.prototype,"_input",2);r=t([C("org-input")],r);const F={title:"Components/Input",component:"org-input",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
 The **\`<org-input>\`** component is a form-associated text input with built-in validation, helper text, and prefix/suffix slots.
 
 ### Features
@@ -194,24 +194,25 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
 \`\`\`html
 <org-input label="Email" type="email" placeholder="you@company.com"></org-input>
 \`\`\`
-`}}},argTypes:{label:{control:"text",description:"Input label text"},value:{control:"text",description:"Current input value"},placeholder:{control:"text",description:"Placeholder text"},type:{control:"select",options:["text","email","password","number","search","tel"],description:"Input type",table:{defaultValue:{summary:"text"}}},helper:{control:"text",description:"Helper text shown below input"},error:{control:"text",description:"Error message (shows red border)"},success:{control:"text",description:"Success message (shows green border)"},size:{control:"select",options:["small","medium","large"],description:"Input size",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the input is disabled"},required:{control:"boolean",description:"Whether the input is required"},readonly:{control:"boolean",description:"Whether the input is read-only"},maxlength:{control:"number",description:"Maximum character length (shows counter when set)"}}},d={name:"Playground",args:{label:"Full name",value:"",placeholder:"Jane Doe",type:"text",helper:"",error:"",success:"",size:"medium",disabled:!1,required:!1,readonly:!1},render:e=>o`
+`}}},argTypes:{label:{control:"text",description:"Input label text"},value:{control:"text",description:"Current input value"},placeholder:{control:"text",description:"Placeholder text"},type:{control:"select",options:["text","email","password","number","search","tel"],description:"Input type",table:{defaultValue:{summary:"text"}}},helper:{control:"text",description:"Helper text shown below input"},error:{control:"text",description:"Error message (shows red border)"},success:{control:"text",description:"Success message (shows green border)"},size:{control:"select",options:["small","medium","large"],description:"Input size",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the input is disabled"},required:{control:"boolean",description:"Whether the input is required"},readonly:{control:"boolean",description:"Whether the input is read-only"},maxlength:{control:"number",description:"Maximum character length (shows counter when set)"},onInput:{action:"input"}}},u={name:"Playground",args:{label:"Full name",value:"",placeholder:"Jane Doe",type:"text",helper:"",error:"",success:"",size:"medium",disabled:!1,required:!1,readonly:!1},render:e=>a`
     <div style="width: 320px;">
       <org-input
-        label="${e.label||a}"
+        label="${e.label||o}"
         .value="${e.value}"
-        placeholder="${e.placeholder||a}"
+        placeholder="${e.placeholder||o}"
         type="${e.type}"
-        helper="${e.helper||a}"
-        error="${e.error||a}"
-        success="${e.success||a}"
+        @input="${e.onInput}"
+        helper="${e.helper||o}"
+        error="${e.error||o}"
+        success="${e.success||o}"
         size="${e.size}"
         ?disabled="${e.disabled}"
         ?required="${e.required}"
         ?readonly="${e.readonly}"
-        maxlength="${e.maxlength??a}"
+        maxlength="${e.maxlength??o}"
       ></org-input>
     </div>
-  `},u={name:"Error State",render:()=>o`
+  `},d={name:"Error State",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Email"
@@ -220,7 +221,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         error="Please enter a valid email address"
       ></org-input>
     </div>
-  `},c={name:"Success State",render:()=>o`
+  `},c={name:"Success State",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Username"
@@ -228,7 +229,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         success="Username is available!"
       ></org-input>
     </div>
-  `},h={name:"With Helper Text",render:()=>o`
+  `},h={name:"With Helper Text",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Password"
@@ -237,7 +238,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         helper="Must be at least 8 characters"
       ></org-input>
     </div>
-  `},m={name:"Character Counter",render:()=>o`
+  `},m={name:"Character Counter",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Bio"
@@ -246,32 +247,32 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         helper="Short bio for your profile"
       ></org-input>
     </div>
-  `},g={name:"Sizes",render:()=>o`
+  `},g={name:"Sizes",render:()=>a`
     <div style="width: 320px; display: flex; flex-direction: column; gap: 16px;">
       <org-input label="Small" size="small" placeholder="Small input"></org-input>
       <org-input label="Medium" size="medium" placeholder="Medium input"></org-input>
       <org-input label="Large" size="large" placeholder="Large input"></org-input>
     </div>
-  `},f={name:"With Prefix Icon",render:()=>o`
+  `},f={name:"With Prefix Icon",render:()=>a`
     <div style="width: 320px;">
       <org-input label="Search" placeholder="Search vendors...">
         <span slot="prefix">🔍</span>
       </org-input>
     </div>
-  `},x={name:"With Suffix Icon",render:()=>o`
+  `},x={name:"With Suffix Icon",render:()=>a`
     <div style="width: 320px;">
       <org-input label="Website" placeholder="example.com">
         <span slot="suffix">🌐</span>
       </org-input>
     </div>
-  `},b={name:"Prefix & Suffix",render:()=>o`
+  `},b={name:"Prefix & Suffix",render:()=>a`
     <div style="width: 320px;">
       <org-input label="Amount" type="number" placeholder="0.00">
         <span slot="prefix">$</span>
         <span slot="suffix">USD</span>
       </org-input>
     </div>
-  `},y={name:"Required",render:()=>o`
+  `},y={name:"Required",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Email"
@@ -280,7 +281,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         required
       ></org-input>
     </div>
-  `},v={name:"Disabled",render:()=>o`
+  `},v={name:"Disabled",render:()=>a`
     <div style="width: 320px;">
       <org-input
         label="Disabled field"
@@ -288,7 +289,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         disabled
       ></org-input>
     </div>
-  `},w={name:"Input Types",render:()=>o`
+  `},w={name:"Input Types",render:()=>a`
     <div style="width: 320px; display: flex; flex-direction: column; gap: 16px;">
       <org-input label="Text" type="text" placeholder="Plain text"></org-input>
       <org-input label="Email" type="email" placeholder="you@example.com"></org-input>
@@ -296,7 +297,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
       <org-input label="Number" type="number" placeholder="0"></org-input>
       <org-input label="Telephone" type="tel" placeholder="+1 (555) 000-0000"></org-input>
     </div>
-  `};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  `};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
   name: 'Playground',
   args: {
     label: 'Full name',
@@ -318,6 +319,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
         .value="\${args.value}"
         placeholder="\${args.placeholder || nothing}"
         type="\${args.type}"
+        @input="\${args.onInput}"
         helper="\${args.helper || nothing}"
         error="\${args.error || nothing}"
         success="\${args.success || nothing}"
@@ -329,7 +331,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
       ></org-input>
     </div>
   \`
-}`,...d.parameters?.docs?.source}}};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+}`,...u.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
   name: 'Error State',
   render: () => html\`
     <div style="width: 320px;">
@@ -341,7 +343,7 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
       ></org-input>
     </div>
   \`
-}`,...u.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+}`,...d.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
   name: 'Success State',
   render: () => html\`
     <div style="width: 320px;">
@@ -447,4 +449,4 @@ The **\`<org-input>\`** component is a form-associated text input with built-in 
       <org-input label="Telephone" type="tel" placeholder="+1 (555) 000-0000"></org-input>
     </div>
   \`
-}`,...w.parameters?.docs?.source}}};const U=["Playground","ErrorState","SuccessState","WithHelper","CharacterCounter","Sizes","WithPrefix","WithSuffix","WithPrefixAndSuffix","Required","Disabled","InputTypes"];export{m as CharacterCounter,v as Disabled,u as ErrorState,w as InputTypes,d as Playground,y as Required,g as Sizes,c as SuccessState,h as WithHelper,f as WithPrefix,b as WithPrefixAndSuffix,x as WithSuffix,U as __namedExportsOrder,F as default};
+}`,...w.parameters?.docs?.source}}};const U=["Playground","ErrorState","SuccessState","WithHelper","CharacterCounter","Sizes","WithPrefix","WithSuffix","WithPrefixAndSuffix","Required","Disabled","InputTypes"];export{m as CharacterCounter,v as Disabled,d as ErrorState,w as InputTypes,u as Playground,y as Required,g as Sizes,c as SuccessState,h as WithHelper,f as WithPrefix,b as WithPrefixAndSuffix,x as WithSuffix,U as __namedExportsOrder,F as default};

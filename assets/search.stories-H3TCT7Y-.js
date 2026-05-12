@@ -1,12 +1,12 @@
-import{i as x,a as y,b as a,A as f}from"./iframe-D5HhjVZl.js";import{n as t,t as w}from"./property-Bv4SVM5X.js";import{r as _}from"./state-lOhfy5K9.js";import{e as S}from"./query-BYlH-2gt.js";import"./preload-helper-PPVm8Dsz.js";var z=Object.defineProperty,$=Object.getOwnPropertyDescriptor,s=(e,r,m,n)=>{for(var i=n>1?void 0:n?$(r,m):r,b=e.length-1,v;b>=0;b--)(v=e[b])&&(i=(n?v(r,m,i):v(i))||i);return n&&i&&z(r,m,i),i};let o=class extends y{constructor(){super(...arguments),this.value="",this.placeholder="Search...",this.size="medium",this.disabled=!1,this.loading=!1,this.debounce=300,this.ariaLabel="Search",this._focused=!1}get _wrapperClass(){const e=["search-wrapper"];return this._focused&&e.push("focused"),this.disabled&&e.push("disabled"),e.join(" ")}_onInput(e){const r=e.target;this.value=r.value,this._debounceTimer&&clearTimeout(this._debounceTimer),this._debounceTimer=setTimeout(()=>{this.dispatchEvent(new CustomEvent("org-search:search",{bubbles:!0,composed:!0,detail:{value:this.value}}))},this.debounce)}_onKeydown(e){e.key==="Enter"&&(this._debounceTimer&&clearTimeout(this._debounceTimer),this.dispatchEvent(new CustomEvent("org-search:submit",{bubbles:!0,composed:!0,detail:{value:this.value}}))),e.key==="Escape"&&this.value&&this._clear()}_clear(){this.value="",this._debounceTimer&&clearTimeout(this._debounceTimer),this._input?.focus(),this.dispatchEvent(new CustomEvent("org-search:clear",{bubbles:!0,composed:!0})),this.dispatchEvent(new CustomEvent("org-search:search",{bubbles:!0,composed:!0,detail:{value:""}}))}_onFocus(){this._focused=!0}_onBlur(){this._focused=!1}focus(){this._input?.focus()}blur(){this._input?.blur()}disconnectedCallback(){super.disconnectedCallback(),this._debounceTimer&&clearTimeout(this._debounceTimer)}render(){const e=a`
+import{i as x,a as y,b as r,A as f}from"./iframe-8TPnJ_Fq.js";import{n,t as w}from"./property-D7Ek9MnM.js";import{r as S}from"./state-BNB_GTPE.js";import{e as _}from"./query-BYlH-2gt.js";import"./preload-helper-PPVm8Dsz.js";var z=Object.defineProperty,$=Object.getOwnPropertyDescriptor,o=(e,s,m,t)=>{for(var i=t>1?void 0:t?$(s,m):s,b=e.length-1,v;b>=0;b--)(v=e[b])&&(i=(t?v(s,m,i):v(i))||i);return t&&i&&z(s,m,i),i};let a=class extends y{constructor(){super(...arguments),this.value="",this.placeholder="Search...",this.size="medium",this.disabled=!1,this.loading=!1,this.debounce=300,this.ariaLabel="Search",this._focused=!1}get _wrapperClass(){const e=["search-wrapper"];return this._focused&&e.push("focused"),this.disabled&&e.push("disabled"),e.join(" ")}_onInput(e){const s=e.target;this.value=s.value,this._debounceTimer&&clearTimeout(this._debounceTimer),this._debounceTimer=setTimeout(()=>{this.dispatchEvent(new CustomEvent("org-search:search",{bubbles:!0,composed:!0,detail:{value:this.value}}))},this.debounce)}_onKeydown(e){e.key==="Enter"&&(this._debounceTimer&&clearTimeout(this._debounceTimer),this.dispatchEvent(new CustomEvent("org-search:submit",{bubbles:!0,composed:!0,detail:{value:this.value}}))),e.key==="Escape"&&this.value&&this._clear()}_clear(){this.value="",this._debounceTimer&&clearTimeout(this._debounceTimer),this._input?.focus(),this.dispatchEvent(new CustomEvent("org-search:clear",{bubbles:!0,composed:!0})),this.dispatchEvent(new CustomEvent("org-search:search",{bubbles:!0,composed:!0,detail:{value:""}}))}_onFocus(){this._focused=!0}_onBlur(){this._focused=!1}focus(){this._input?.focus()}blur(){this._input?.blur()}disconnectedCallback(){super.disconnectedCallback(),this._debounceTimer&&clearTimeout(this._debounceTimer)}render(){const e=r`
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="8"></circle>
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>`,r=a`
+      </svg>`,s=r`
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>`;return a`
+      </svg>`;return r`
       <div class="${this.size}" part="container">
         <div class="${this._wrapperClass}">
           <span class="search-icon" aria-hidden="true">${e}</span>
@@ -24,17 +24,17 @@ import{i as x,a as y,b as a,A as f}from"./iframe-D5HhjVZl.js";import{n as t,t as
             @blur="${this._onBlur}"
           />
 
-          ${this.loading?a`<span class="spinner" aria-hidden="true"></span>`:this.value?a`
+          ${this.loading?r`<span class="spinner" aria-hidden="true"></span>`:this.value?r`
                 <button
                   class="clear-btn"
                   part="clear-btn"
                   type="button"
                   aria-label="Clear search"
                   @click="${this._clear}"
-                >${r}</button>`:f}
+                >${s}</button>`:f}
         </div>
       </div>
-    `}};o.styles=x`
+    `}};a.styles=x`
     :host {
       display: block;
       font-family: var(--org-font-family, sans-serif);
@@ -168,7 +168,7 @@ import{i as x,a as y,b as a,A as f}from"./iframe-D5HhjVZl.js";import{n as t,t as
     @keyframes org-search-spin {
       to { transform: rotate(360deg); }
     }
-  `;s([t({type:String})],o.prototype,"value",2);s([t({type:String})],o.prototype,"placeholder",2);s([t({type:String})],o.prototype,"size",2);s([t({type:Boolean,reflect:!0})],o.prototype,"disabled",2);s([t({type:Boolean,reflect:!0})],o.prototype,"loading",2);s([t({type:Number})],o.prototype,"debounce",2);s([t({type:String,attribute:"aria-label"})],o.prototype,"ariaLabel",2);s([_()],o.prototype,"_focused",2);s([S("input")],o.prototype,"_input",2);o=s([w("org-search")],o);const P={title:"Components/Search",component:"org-search",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
+  `;o([n({type:String})],a.prototype,"value",2);o([n({type:String})],a.prototype,"placeholder",2);o([n({type:String})],a.prototype,"size",2);o([n({type:Boolean,reflect:!0})],a.prototype,"disabled",2);o([n({type:Boolean,reflect:!0})],a.prototype,"loading",2);o([n({type:Number})],a.prototype,"debounce",2);o([n({type:String,attribute:"aria-label"})],a.prototype,"ariaLabel",2);o([S()],a.prototype,"_focused",2);o([_("input")],a.prototype,"_input",2);a=o([w("org-search")],a);const P={title:"Components/Search",component:"org-search",tags:["autodocs"],parameters:{layout:"centered",docs:{description:{component:`
 The **\`<org-search>\`** component is a specialized search input with built-in icon, clear button, and loading state.
 
 ### Features
@@ -190,7 +190,7 @@ The **\`<org-search>\`** component is a specialized search input with built-in i
 \`\`\`html
 <org-search placeholder="Search vendors..."></org-search>
 \`\`\`
-`}}},argTypes:{value:{control:"text",description:"Current search value"},placeholder:{control:"text",description:"Placeholder text"},size:{control:"select",options:["small","medium","large"],description:"Size of the search input",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the search is disabled"},loading:{control:"boolean",description:"Whether to show loading spinner"},debounce:{control:"number",description:"Debounce delay in milliseconds",table:{defaultValue:{summary:"300"}}}}},l={name:"Playground",args:{value:"",placeholder:"Search...",size:"medium",disabled:!1,loading:!1,debounce:300},render:e=>a`
+`}}},argTypes:{value:{control:"text",description:"Current search value"},placeholder:{control:"text",description:"Placeholder text"},size:{control:"select",options:["small","medium","large"],description:"Size of the search input",table:{defaultValue:{summary:"medium"}}},disabled:{control:"boolean",description:"Whether the search is disabled"},loading:{control:"boolean",description:"Whether to show loading spinner"},debounce:{control:"number",description:"Debounce delay in milliseconds",table:{defaultValue:{summary:"300"}}},onSearch:{action:"search"},onSubmit:{action:"submit"},onClear:{action:"clear"}}},c={name:"Playground",args:{value:"",placeholder:"Search...",size:"medium",disabled:!1,loading:!1,debounce:300},render:e=>r`
     <div style="width: 360px;">
       <org-search
         .value="${e.value}"
@@ -199,38 +199,38 @@ The **\`<org-search>\`** component is a specialized search input with built-in i
         ?disabled="${e.disabled}"
         ?loading="${e.loading}"
         debounce="${e.debounce}"
-        @org-search:search="${r=>console.log("search:",r.detail)}"
-        @org-search:submit="${r=>console.log("submit:",r.detail)}"
-        @org-search:clear="${()=>console.log("cleared")}"
+        @org-search:search="${e.onSearch}"
+        @org-search:submit="${e.onSubmit}"
+        @org-search:clear="${e.onClear}"
       ></org-search>
     </div>
-  `},c={name:"Default",render:()=>a`
+  `},l={name:"Default",render:()=>r`
     <div style="width: 360px;">
       <org-search placeholder="Search vendors..."></org-search>
     </div>
-  `},d={name:"With Value",render:()=>a`
+  `},d={name:"With Value",render:()=>r`
     <div style="width: 360px;">
       <org-search value="enterprise components" placeholder="Search..."></org-search>
     </div>
-  `},h={name:"Loading",render:()=>a`
+  `},h={name:"Loading",render:()=>r`
     <div style="width: 360px;">
       <org-search value="searching..." loading placeholder="Search..."></org-search>
     </div>
-  `},p={name:"Sizes",render:()=>a`
+  `},p={name:"Sizes",render:()=>r`
     <div style="width: 360px; display: flex; flex-direction: column; gap: 16px;">
       <org-search size="small" placeholder="Small search"></org-search>
       <org-search size="medium" placeholder="Medium search"></org-search>
       <org-search size="large" placeholder="Large search"></org-search>
     </div>
-  `},u={name:"Disabled",render:()=>a`
+  `},u={name:"Disabled",render:()=>r`
     <div style="width: 360px;">
       <org-search disabled placeholder="Cannot search"></org-search>
     </div>
-  `},g={name:"Custom Placeholder",render:()=>a`
+  `},g={name:"Custom Placeholder",render:()=>r`
     <div style="width: 360px;">
       <org-search placeholder="Search by name, email, or ID..."></org-search>
     </div>
-  `};l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{
+  `};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
   name: 'Playground',
   args: {
     value: '',
@@ -249,20 +249,20 @@ The **\`<org-search>\`** component is a specialized search input with built-in i
         ?disabled="\${args.disabled}"
         ?loading="\${args.loading}"
         debounce="\${args.debounce}"
-        @org-search:search="\${(e: CustomEvent) => console.log('search:', e.detail)}"
-        @org-search:submit="\${(e: CustomEvent) => console.log('submit:', e.detail)}"
-        @org-search:clear="\${() => console.log('cleared')}"
+        @org-search:search="\${args.onSearch}"
+        @org-search:submit="\${args.onSubmit}"
+        @org-search:clear="\${args.onClear}"
       ></org-search>
     </div>
   \`
-}`,...l.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+}`,...c.parameters?.docs?.source}}};l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{
   name: 'Default',
   render: () => html\`
     <div style="width: 360px;">
       <org-search placeholder="Search vendors..."></org-search>
     </div>
   \`
-}`,...c.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+}`,...l.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
   name: 'With Value',
   render: () => html\`
     <div style="width: 360px;">
@@ -299,4 +299,4 @@ The **\`<org-search>\`** component is a specialized search input with built-in i
       <org-search placeholder="Search by name, email, or ID..."></org-search>
     </div>
   \`
-}`,...g.parameters?.docs?.source}}};const L=["Playground","Default","WithValue","Loading","Sizes","Disabled","CustomPlaceholder"];export{g as CustomPlaceholder,c as Default,u as Disabled,h as Loading,l as Playground,p as Sizes,d as WithValue,L as __namedExportsOrder,P as default};
+}`,...g.parameters?.docs?.source}}};const L=["Playground","Default","WithValue","Loading","Sizes","Disabled","CustomPlaceholder"];export{g as CustomPlaceholder,l as Default,u as Disabled,h as Loading,c as Playground,p as Sizes,d as WithValue,L as __namedExportsOrder,P as default};
