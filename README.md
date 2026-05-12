@@ -382,11 +382,27 @@ npm run storybook
 # Auto-generate stories for all components
 npm run generate:stories
 
+# Run tests
+npm test
+
+#update minar or patch or major version
+npm run release
+npm version minor 
+npm version major
+
 # Build the library
 npm run build
 
-# Run tests
-npm test
+#publish to npm with login
+npm publish 
+# OR
+npm login
+npm publish
+
+#check published files
+npm list
+
+
 ```
 
 ### Adding a new component
